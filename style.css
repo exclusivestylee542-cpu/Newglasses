@@ -197,3 +197,18 @@ footer .fl{color:var(--gold);letter-spacing:.45em;font-size:.62rem;margin-bottom
   #coleccion .card .pr{font-size:.72rem;letter-spacing:.08em}
   #coleccion .card .add{margin-top:8px;padding:11px 4px;font-size:.52rem;letter-spacing:.16em}
 }
+
+/* ===== Portada con la nueva imagen de fondo ===== */
+.hero{background:#000;height:calc(100svh - 68px - 90px)}
+.hero::before{content:"";position:absolute;inset:-30px;background:url("portada-nueva.jpg") center/cover;filter:blur(28px) brightness(.45);z-index:0}
+.hero h1,.hero .eyebrow{display:none!important}
+.hero-img{z-index:1;top:0;left:0;width:100%;height:calc(100% - 84px);object-fit:cover;object-position:center top}
+.hero-copy{z-index:2;left:0;right:0;bottom:0;height:84px;padding:0 14px;display:flex;align-items:center;justify-content:center;background:#000}
+.hero .actions{display:flex;flex-wrap:nowrap;justify-content:center;gap:10px;margin:0}
+.hero .btn{padding:13px 12px;font-size:.56rem;letter-spacing:.16em;white-space:nowrap}
+@media(min-width:900px){
+  .hero{display:block;height:calc(100svh - 68px)}
+  .hero-img{position:absolute;left:50%;width:auto;max-width:100%;transform:translateX(-50%);object-fit:contain;order:0}
+  .hero-copy{position:absolute;left:0;right:0;bottom:0;padding:0 24px;text-align:center;align-self:auto}
+  .hero .btn{padding:15px 30px;font-size:.7rem;letter-spacing:.24em}
+}
