@@ -1,8 +1,17 @@
 NEW GLASSES MEDELLIN - Tienda online
 
-1. Abre index.html en el navegador (la carpeta img debe estar junto al archivo).
-2. En index.html busca "CONFIGURACION" y cambia el numero de WhatsApp (573000000000).
-3. Busca TU_USUARIO (Instagram) y TU_PAGINA (Facebook) y pon tus enlaces.
-4. Para agregar productos: guarda la foto en img/productos/ y agrega una linea en la lista PRODUCTOS:
+ARCHIVOS: index.html (estructura), style.css (diseño), script.js (carrito y configuración)
+y la carpeta img (logo, portada, fotos y mármol). Deben quedar juntos en la misma carpeta.
+Para verla: abre index.html en el navegador.
+
+1. Abre script.js y cambia, al inicio, en CONFIG:
+   - whatsapp:  tu número con indicativo, sin + ni espacios (ej. 573001234567)
+   - instagram: el enlace de tu Instagram
+   - facebook:  el enlace de tu Facebook
+   Con eso se actualizan el botón flotante de WhatsApp y los botones de contacto.
+
+2. Agregar productos: guarda la foto en img/productos/ y agrega una línea en la lista PRODUCTOS de script.js:
    { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
-   (cat puede ser "dama" o "hombre")
+   (cat puede ser "dama" o "hombre"; cada id debe ser distinto)
+
+3. Textos: el texto de "Nuestra historia" está en index.html (sección id="historia").
