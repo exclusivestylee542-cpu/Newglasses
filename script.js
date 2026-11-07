@@ -13,11 +13,35 @@ const CONFIG = {
    { id:2, cat:"hombre", nombre:"Montura 002", precio:129900, img:"img/productos/002.jpg" },
 */
 const PRODUCTOS = [
+  { id:1, cat:"dama", nombre:"Montura 8010", precio:0, img:"img/productos/8010.jpg" },
+  { id:2, cat:"dama", nombre:"Montura 2271", precio:0, img:"img/productos/2271.jpg" },
+  { id:3, cat:"dama", nombre:"Montura 9217", precio:0, img:"img/productos/9217.jpg" },
+  { id:4, cat:"dama", nombre:"Montura 001", precio:0, img:"img/productos/001.jpg" },
+  { id:5, cat:"dama", nombre:"Montura 6073", precio:0, img:"img/productos/6073.jpg" },
+  { id:6, cat:"dama", nombre:"Montura 2275", precio:0, img:"img/productos/2275.jpg" },
+  { id:7, cat:"dama", nombre:"Montura 2272", precio:0, img:"img/productos/2272.jpg" },
+  { id:8, cat:"dama", nombre:"Montura 6235", precio:0, img:"img/productos/6235.jpg" },
+  { id:9, cat:"dama", nombre:"Montura 9201", precio:0, img:"img/productos/9201.jpg" },
+  { id:10, cat:"dama", nombre:"Montura 2273", precio:0, img:"img/productos/2273.jpg" },
+  { id:11, cat:"dama", nombre:"Montura 9200", precio:0, img:"img/productos/9200.jpg" },
+  { id:12, cat:"dama", nombre:"Montura 7021", precio:0, img:"img/productos/7021.jpg" },
+  { id:13, cat:"hombre", nombre:"Montura 8010", precio:0, img:"img/productos/8010.jpg" },
+  { id:14, cat:"hombre", nombre:"Montura 2271", precio:0, img:"img/productos/2271.jpg" },
+  { id:15, cat:"hombre", nombre:"Montura 9217", precio:0, img:"img/productos/9217.jpg" },
+  { id:16, cat:"hombre", nombre:"Montura 001", precio:0, img:"img/productos/001.jpg" },
+  { id:17, cat:"hombre", nombre:"Montura 6073", precio:0, img:"img/productos/6073.jpg" },
+  { id:18, cat:"hombre", nombre:"Montura 2275", precio:0, img:"img/productos/2275.jpg" },
+  { id:19, cat:"hombre", nombre:"Montura 2272", precio:0, img:"img/productos/2272.jpg" },
+  { id:20, cat:"hombre", nombre:"Montura 6235", precio:0, img:"img/productos/6235.jpg" },
+  { id:21, cat:"hombre", nombre:"Montura 9201", precio:0, img:"img/productos/9201.jpg" },
+  { id:22, cat:"hombre", nombre:"Montura 2273", precio:0, img:"img/productos/2273.jpg" },
+  { id:23, cat:"hombre", nombre:"Montura 9200", precio:0, img:"img/productos/9200.jpg" },
+  { id:24, cat:"hombre", nombre:"Montura 7021", precio:0, img:"img/productos/7021.jpg" },
 ];
 
 /* ============ LÓGICA ============ */
 const $ = s => document.querySelector(s);
-const fmt = n => "$" + n.toLocaleString("es-CO");
+const fmt = n => n ? "$" + n.toLocaleString("es-CO") : "Consultar precio";
 let cat = "dama";
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem("ng_cart") || "[]"); } catch (e) { cart = []; }
