@@ -172,3 +172,28 @@ footer .fl{color:var(--gold);letter-spacing:.45em;font-size:.62rem;margin-bottom
 .co .row .btn{flex:1;padding:14px 10px}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);border:1px solid var(--line);color:var(--gold-l);padding:12px 22px;z-index:130;font-size:.78rem;letter-spacing:.12em;opacity:0;pointer-events:none;transition:.3s}
 .toast.show{opacity:1}
+
+/* ===== Catálogo: 2 productos por fila ===== */
+#coleccion{padding:72px 0 80px}
+#coleccion .head{margin-bottom:40px}
+#coleccion .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+#coleccion .card .ph{aspect-ratio:3/4}
+#coleccion .card .bd{padding:18px 12px 16px}
+#coleccion .card h3{font-size:1.25rem}
+@media(min-width:960px){
+  #coleccion .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+  #coleccion .card h3{font-size:1.4rem}
+}
+@media(max-width:700px){
+  #coleccion{padding:48px 0 56px}
+  #coleccion .wrap{padding:0 14px}
+  #coleccion .head{margin-bottom:28px}
+  #coleccion .head-img{display:none}
+  #coleccion h2{font-size:1.75rem}
+  #coleccion .tabs{gap:22px;margin-bottom:24px}
+  #coleccion .grid{gap:12px}
+  #coleccion .card .bd{padding:12px 8px 12px;gap:4px}
+  #coleccion .card h3{font-size:1.02rem}
+  #coleccion .card .pr{font-size:.72rem;letter-spacing:.08em}
+  #coleccion .card .add{margin-top:8px;padding:11px 4px;font-size:.52rem;letter-spacing:.16em}
+}
