@@ -1,0 +1,8 @@
+NEW GLASSES MEDELLIN - Tienda online
+
+1. Abre index.html en el navegador (la carpeta img debe estar junto al archivo).
+2. En index.html busca "CONFIGURACION" y cambia el numero de WhatsApp (573000000000).
+3. Busca TU_USUARIO (Instagram) y TU_PAGINA (Facebook) y pon tus enlaces.
+4. Para agregar productos: guarda la foto en img/productos/ y agrega una linea en la lista PRODUCTOS:
+   { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
+   (cat puede ser "dama" o "hombre")

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Glasses Medellín · Exclusive Optics</title>
+<meta name="description" content="Nuevas perspectivas. Más estilo. Gafas únicas. Tienda online de New Glasses Medellín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#c9a45c; --gold-2:#e6c986; --ink:#0b0b0c; --ink-2:#151517;
+  --marble:#f4f2ee; --line:rgba(201,164,92,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Montserrat',system-ui,sans-serif; color:var(--ink); background-color:var(--marble);
+  /* Fondo de mármol generado con SVG (no necesita imagen) */
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='m' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='0.004 0.009' numOctaves='5' seed='7'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .34  0 0 0 0 .33  0 0 0 -3.2 1.55'/></filter><rect width='100%' height='100%' filter='url(%23m)' opacity='.55'/></svg>");
+  background-attachment:fixed; background-size:cover;
+}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.02em}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* Barra superior */
+header{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--gold-2)}
+.brand img{height:46px;width:46px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+.brand span{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#ddd;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;transition:.2s}
+nav a:hover{color:var(--gold-2)}
+.cart-btn{position:relative;background:transparent;color:var(--gold-2);border:1px solid var(--gold);padding:9px 16px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
+.cart-btn:hover{background:var(--gold);color:var(--ink)}
+.cart-btn b{margin-left:8px;background:var(--gold);color:var(--ink);border-radius:50%;padding:1px 7px;font-size:.7rem}
+@media(max-width:760px){nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;
+  background:#0b0b0c linear-gradient(135deg,#0b0b0c,#1d1b17) center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:url('img/fondo-1.jpg') center/cover no-repeat;opacity:.5;filter:blur(2px)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,rgba(0,0,0,.8))}
+.hero .in{position:relative;z-index:2;padding:40px 20px}
+.hero .logo{width:min(230px,52vw);border-radius:50%;box-shadow:0 0 60px rgba(201,164,92,.25);margin-bottom:26px}
+.hero h1{font-size:clamp(2rem,5.5vw,4rem);line-height:1.1;margin-bottom:14px}
+.hero h1 em{color:var(--gold-2);font-style:italic}
+.hero p{max-width:560px;margin:0 auto 28px;color:#ddd;font-weight:300;letter-spacing:.06em}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);padding:14px 30px;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;transition:.25s}
+.btn:hover{background:var(--gold-2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--gold-2);border:1px solid var(--gold);margin-left:10px}
+.btn.ghost:hover{background:rgba(201,164,92,.15)}
+
+/* Secciones */
+section{padding:84px 0}
+.title{text-align:center;margin-bottom:44px}
+.title small{display:block;color:#8a6d2f;font-size:.74rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:10px}
+.title h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.title i{display:block;width:70px;height:1px;background:var(--gold);margin:16px auto 0}
+
+/* Catálogo */
+.tabs{display:flex;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
+.tab{background:transparent;border:1px solid #1a1a1a;color:#1a1a1a;padding:11px 28px;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;transition:.2s}
+.tab.on,.tab:hover{background:var(--ink);color:var(--gold-2);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:rgba(255,255,255,.78);border:1px solid rgba(0,0,0,.08);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.16)}
+.card .ph{aspect-ratio:1/1;overflow:hidden;cursor:zoom-in;background:#e9e6e0}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .ph img{transform:scale(1.05)}
+.card .bd{padding:18px;text-align:center;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:1.25rem}
+.card .pr{color:#8a6d2f;font-weight:600;letter-spacing:.06em}
+.card .add{margin-top:auto;background:var(--ink);color:var(--gold-2);padding:12px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.card .add:hover{background:var(--gold);color:var(--ink)}
+.empty{grid-column:1/-1;text-align:center;padding:64px 20px;border:1px dashed rgba(0,0,0,.25);background:rgba(255,255,255,.55)}
+.empty h3{font-size:1.7rem;margin-bottom:8px}
+.empty p{color:#555;font-weight:300}
+
+/* Galería */
+.dark{background:var(--ink);color:#fff}
+.dark .title small{color:var(--gold)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal figure{position:relative;aspect-ratio:9/16;overflow:hidden;background:linear-gradient(135deg,#1c1c1f,#0d0d0e);border:1px solid var(--line)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gal figure:hover img{transform:scale(1.06)}
+@media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+/* Nosotros / contacto */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about .pic{aspect-ratio:4/5;background:#111 url('img/fondo-2.jpg') center/cover;border:1px solid var(--line)}
+.about p{line-height:1.85;color:#333;font-weight:300;margin-bottom:14px}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#aaa;text-align:center;padding:38px 20px;font-size:.82rem;letter-spacing:.08em}
+footer b{color:var(--gold-2);font-family:'Cormorant Garamond',serif;font-size:1.2rem;letter-spacing:.2em;font-weight:600}
+
+/* Botones flotantes */
+.float{position:fixed;right:18px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px}
+.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:.25s}
+.float a:hover{transform:scale(1.1)}
+.float svg{width:28px;height:28px;fill:#fff}
+.wsp{background:#25d366}.ig{background:linear-gradient(45deg,#f9a03f,#dd2a7b 55%,#515bd4)}.fb{background:#1877f2}
+
+/* Visor de foto grande */
+.lb{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:14px}
+.lb.open{display:flex}
+.lb img{max-width:min(94vw,900px);max-height:76vh;object-fit:contain;border:1px solid var(--line)}
+.lb .cap{color:#fff;text-align:center}
+.lb .cap h3{color:var(--gold-2);font-size:1.6rem}
+.lb .x{position:absolute;top:16px;right:20px;background:none;color:#fff;font-size:2.2rem}
+
+/* Carrito */
+.shade{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;display:none}
+.shade.open{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fbfaf7;z-index:110;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer header{position:static;background:var(--ink);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;color:var(--gold-2)}
+.drawer header h3{font-size:1.4rem}
+.drawer header button{background:none;color:#fff;font-size:1.8rem}
+.items{flex:1;overflow:auto;padding:14px 20px}
+.it{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #e5e1d8}
+.it img{width:62px;height:62px;object-fit:cover;background:#ddd}
+.it .q{display:flex;gap:8px;align-items:center;margin-top:4px}
+.it .q button{width:24px;height:24px;background:var(--ink);color:#fff}
+.it .rm{background:none;color:#a33;font-size:.75rem}
+.none{text-align:center;color:#777;padding:50px 10px;font-weight:300}
+.foot{padding:16px 20px;border-top:1px solid #e0dccf}
+.tot{display:flex;justify-content:space-between;font-weight:600;margin-bottom:12px}
+.foot .btn{width:100%;text-align:center}
+
+/* Formulario contra entrega */
+.co{display:none;padding:16px 20px;overflow:auto;flex:1}
+.co.open{display:block}
+.co h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:4px}
+.co .note{background:#f2ead7;border-left:3px solid var(--gold);padding:10px 12px;font-size:.82rem;margin:10px 0 16px}
+.co label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 5px;color:#444}
+.co input,.co textarea,.co select{width:100%;padding:11px;border:1px solid #cfc9bb;background:#fff;font:inherit}
+.co .row{display:flex;gap:10px;margin-top:18px}
+.co .row .btn{flex:1;text-align:center;margin:0}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--gold-2);padding:12px 22px;z-index:130;font-size:.85rem;opacity:0;pointer-events:none;transition:.3s}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand">
+      <img src="img/logo.png" alt="" onerror="this.style.display='none'">
+      <span>New Glasses</span>
+    </a>
+    <nav><ul>
+      <li><a href="#catalogo" data-go="dama">Gafas de dama</a></li>
+      <li><a href="#catalogo" data-go="hombre">Gafas de hombre</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul></nav>
+    <button class="cart-btn" id="openCart">Carrito <b id="count">0</b></button>
+  </div>
+</header>
+
+<!-- INICIO -->
+<div class="hero" id="inicio">
+  <div class="in">
+    <img class="logo" src="img/logo.png" alt="New Glasses Medellín" onerror="this.style.display='none'">
+    <h1>Una <em>experiencia de lujo</em><br>para tu mirada</h1>
+    <p>Nuevas perspectivas. Más estilo. Gafas únicas.</p>
+    <a href="#catalogo" class="btn">Ver colección</a>
+    <a href="https://wa.me/573000000000" class="btn ghost" target="_blank" rel="noopener">Escríbenos</a>
+  </div>
+</div>
+
+<!-- CATÁLOGO -->
+<section id="catalogo">
+  <div class="wrap">
+    <div class="title"><small>Exclusive Style</small><h2>Nuestra colección</h2><i></i></div>
+    <div class="tabs">
+      <button class="tab on" data-cat="dama">Gafas de dama</button>
+      <button class="tab" data-cat="hombre">Gafas de hombre</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- GALERÍA (las 4 imágenes del collage, separadas) -->
+<section class="dark" id="galeria">
+  <div class="wrap">
+    <div class="title"><small>Boutique</small><h2 style="color:#fff">El círculo EXC.</h2><i></i></div>
+    <div class="gal">
+      <figure><img src="img/galeria-1.jpg" alt="La exclusividad no es para todos. Es para ti." onerror="this.remove()"></figure>
+      <figure><img src="img/galeria-2.jpg" alt="Donde cada marco es una obra maestra." onerror="this.remove()"></figure>
+      <figure><img src="img/galeria-3.jpg" alt="Una experiencia de lujo para tu mirada." onerror="this.remove()"></figure>
+      <figure><img src="img/galeria-4.jpg" alt="Vive la definición del estilo único." onerror="this.remove()"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="wrap about">
+    <div class="pic"></div>
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:22px"><small>New Glasses Medellín</small><h2>Exclusive Optics</h2></div>
+      <p>Una boutique de gafas pensada para quienes buscan algo distinto. Cada pieza se elige con cuidado para que tu estilo hable por ti.</p>
+      <p><b>Pago contra entrega</b> en Medellín y envíos a todo el país. Pide por la página o escríbenos directamente por WhatsApp.</p>
+      <a href="https://wa.me/573000000000" target="_blank" rel="noopener" class="btn">Hablar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>NEW GLASSES</b><br>MEDELLÍN · EXC. | EXCLUSIVE STYLE<br><br>© 2026 New Glasses Medellín. Todos los derechos reservados.
+</footer>
+
+<!-- Botones flotantes -->
+<div class="float">
+  <a class="fb" href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.4h-3.3V8.3c0-1 .3-1.7 1.7-1.7H17V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.6H7.5v3.4h2.8V22h3.2z"/></svg></a>
+  <a class="ig" href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+  <a class="wsp" href="https://wa.me/573000000000?text=Hola%20New%20Glasses%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100l-.8 1c-.1.200-.3.200-.5.100-.2-.1-1-.4-1.900-1.200-.7-.6-1.200-1.400-1.300-1.600-.1-.2 0-.4.100-.5l.4-.4.200-.4v-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.100-.6.300-.2.200-.9.900-.9 2.200s.9 2.500 1.100 2.700c.1.200 1.900 2.900 4.600 4 .6.3 1.100.4 1.500.5.600.2 1.200.2 1.700.1.500-.1 1.500-.6 1.700-1.200.2-.6.2-1.100.2-1.200-.1-.1-.2-.2-.5-.3z"/></svg></a>
+</div>
+
+<!-- Visor foto grande -->
+<div class="lb" id="lb">
+  <button class="x" id="lbx" aria-label="Cerrar">×</button>
+  <img id="lbimg" alt="">
+  <div class="cap"><h3 id="lbname"></h3><div id="lbprice" style="margin:4px 0 12px"></div><button class="btn" id="lbadd">Agregar al carrito</button></div>
+</div>
+
+<!-- Carrito -->
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer">
+  <header><h3 id="dtitle">Tu carrito</h3><button id="closeCart" aria-label="Cerrar">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="foot" id="foot">
+    <div class="tot"><span>Total</span><span id="total">$0</span></div>
+    <button class="btn" id="goPay">Pagar contra entrega</button>
+  </div>
+  <form class="co" id="co">
+    <h4>Pago contra entrega</h4>
+    <div class="note">Pagas en efectivo cuando recibes tus gafas. Te confirmaremos el pedido por WhatsApp.</div>
+    <label>Nombre completo</label><input name="nombre" required>
+    <label>Celular / WhatsApp</label><input name="cel" type="tel" required>
+    <label>Ciudad</label><input name="ciudad" required value="Medellín">
+    <label>Dirección de entrega</label><textarea name="dir" rows="2" required></textarea>
+    <label>Observaciones (opcional)</label><textarea name="obs" rows="2"></textarea>
+    <div class="row"><button type="button" class="btn ghost" id="back" style="margin:0">Volver</button><button class="btn" type="submit">Confirmar pedido</button></div>
+  </form>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ CONFIGURACIÓN ============ */
+const WHATSAPP = "573000000000";   // tu número con indicativo, sin + ni espacios
+const TIENDA   = "New Glasses Medellín";
+
+/* ============ PRODUCTOS ============
+   El catálogo está vacío. Para agregar uno, copia este formato dentro de la lista:
+   { id:1, cat:"dama",   nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
+   { id:2, cat:"hombre", nombre:"Montura 002", precio:129900, img:"img/productos/002.jpg" }
+*/
+const PRODUCTOS = [
+];
+
+/* ============ LÓGICA ============ */
+const $ = s => document.querySelector(s);
+const fmt = n => "$" + n.toLocaleString("es-CO");
+let cat = "dama";
+let cart = JSON.parse(localStorage.getItem("ng_cart") || "[]");
+
+function renderGrid(){
+  const list = PRODUCTOS.filter(p => p.cat === cat);
+  const g = $("#grid");
+  if(!list.length){
+    g.innerHTML = `<div class="empty"><h3>Próximamente</h3><p>Estamos preparando la nueva colección de gafas de ${cat}. Escríbenos por WhatsApp para conocer lo que tenemos disponible.</p></div>`;
+    return;
+  }
+  g.innerHTML = list.map(p => `
+    <article class="card">
+      <div class="ph" data-view="${p.id}"><img src="${p.img}" alt="${p.nombre}" loading="lazy"></div>
+      <div class="bd"><h3>${p.nombre}</h3><div class="pr">${fmt(p.precio)}</div>
+        <button class="add" data-add="${p.id}">Agregar al carrito</button></div>
+    </article>`).join("");
+}
+function save(){ localStorage.setItem("ng_cart", JSON.stringify(cart)); renderCart(); }
+function toast(t){ const e=$("#toast"); e.textContent=t; e.classList.add("show"); setTimeout(()=>e.classList.remove("show"),1800); }
+function add(id){
+  const p = PRODUCTOS.find(x=>x.id==id); if(!p) return;
+  const l = cart.find(x=>x.id==id); l ? l.q++ : cart.push({id:p.id,q:1});
+  save(); toast("Agregado al carrito");
+}
+function renderCart(){
+  const rows = cart.map(l => ({...PRODUCTOS.find(p=>p.id==l.id), q:l.q})).filter(r=>r.id!==undefined);
+  $("#count").textContent = rows.reduce((a,r)=>a+r.q,0);
+  $("#items").innerHTML = rows.length ? rows.map(r=>`
+    <div class="it"><img src="${r.img}" alt="">
+      <div><div>${r.nombre}</div><div style="color:#8a6d2f">${fmt(r.precio)}</div>
+        <div class="q"><button data-m="${r.id}">−</button>${r.q}<button data-p="${r.id}">+</button></div></div>
+      <button class="rm" data-rm="${r.id}">Quitar</button></div>`).join("")
+    : `<div class="none">Tu carrito está vacío.</div>`;
+  $("#total").textContent = fmt(rows.reduce((a,r)=>a+r.precio*r.q,0));
+  $("#goPay").disabled = !rows.length; $("#goPay").style.opacity = rows.length ? 1 : .4;
+}
+function openCart(o=true){ $("#drawer").classList.toggle("open",o); $("#shade").classList.toggle("open",o); if(!o) showCheckout(false); }
+function showCheckout(on){
+  $("#co").classList.toggle("open",on);
+  $("#items").style.display = on ? "none" : "";
+  $("#foot").style.display = on ? "none" : "";
+  $("#dtitle").textContent = on ? "Finalizar pedido" : "Tu carrito";
+}
+function view(id){
+  const p = PRODUCTOS.find(x=>x.id==id); if(!p) return;
+  $("#lbimg").src = p.img; $("#lbname").textContent = p.nombre; $("#lbprice").textContent = fmt(p.precio);
+  $("#lbadd").dataset.add = p.id; $("#lb").classList.add("open");
+}
+
+document.addEventListener("click", e=>{
+  const t = e.target;
+  if(t.dataset.add){ add(t.dataset.add); if(t.id==="lbadd") $("#lb").classList.remove("open"); }
+  if(t.closest("[data-view]")) view(t.closest("[data-view]").dataset.view);
+  if(t.dataset.p){ cart.find(x=>x.id==t.dataset.p).q++; save(); }
+  if(t.dataset.m){ const l=cart.find(x=>x.id==t.dataset.m); l.q--; if(l.q<1) cart=cart.filter(x=>x!==l); save(); }
+  if(t.dataset.rm){ cart=cart.filter(x=>x.id!=t.dataset.rm); save(); }
+  if(t.dataset.cat){ cat=t.dataset.cat; document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on",b.dataset.cat===cat)); renderGrid(); }
+  if(t.dataset.go){ cat=t.dataset.go; document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on",b.dataset.cat===cat)); renderGrid(); }
+});
+$("#openCart").onclick = ()=>openCart(true);
+$("#closeCart").onclick = $("#shade").onclick = ()=>openCart(false);
+$("#lbx").onclick = ()=>$("#lb").classList.remove("open");
+$("#lb").onclick = e=>{ if(e.target.id==="lb") $("#lb").classList.remove("open"); };
+$("#goPay").onclick = ()=>showCheckout(true);
+$("#back").onclick = ()=>showCheckout(false);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape"){ $("#lb").classList.remove("open"); openCart(false); } });
+
+$("#co").addEventListener("submit", e=>{
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target));
+  const rows = cart.map(l => ({...PRODUCTOS.find(p=>p.id==l.id), q:l.q})).filter(r=>r.id!==undefined);
+  const total = rows.reduce((a,r)=>a+r.precio*r.q,0);
+  const msg = `*Nuevo pedido - ${TIENDA}*\n\n` +
+    rows.map(r=>`• ${r.nombre} x${r.q} — ${fmt(r.precio*r.q)}`).join("\n") +
+    `\n\n*Total:* ${fmt(total)}\n*Pago:* Contra entrega\n\n` +
+    `*Nombre:* ${f.nombre}\n*Celular:* ${f.cel}\n*Ciudad:* ${f.ciudad}\n*Dirección:* ${f.dir}` +
+    (f.obs ? `\n*Obs:* ${f.obs}` : "");
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+  cart = []; save(); e.target.reset(); openCart(false); toast("¡Pedido enviado por WhatsApp!");
+});
+
+renderGrid(); renderCart();
+</script>
+</body>
+</html>
