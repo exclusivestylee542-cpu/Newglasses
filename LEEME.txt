@@ -5,6 +5,7 @@ ARCHIVOS
   style.css     diseño
   script.js     carrito, enlaces (CONFIG) e imágenes incrustadas
   productos.js  APARTADOS Y PRODUCTOS  <-- aquí agregas tus productos
+  fotos.js      fotos de productos incrustadas (se genera solo; si agregas productos nuevos usa img/ y avísale a Claude para regenerarlo)
   img/          carpeta de imágenes (las fotos de tus productos van aquí, directo en img/)
 Sube todos juntos. Para ver la página abre index.html.
 
