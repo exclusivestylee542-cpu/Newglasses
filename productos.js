@@ -9,7 +9,7 @@
 const CATEGORIAS = [
   { id: "dama",       nombre: "Gafas de dama" },
   { id: "hombre",     nombre: "Gafas de hombre" },
-  { id: "deportivas", nombre: "Deportivas" },
+  { id: "deportivas", nombre: "Gafas sport" },
   { id: "descanso",   nombre: "Descanso (luz azul)" },
   { id: "sol",        nombre: "Gafas de sol" },
   { id: "ninos",      nombre: "Niños" },
@@ -33,5 +33,8 @@ const PRODUCTOS = [
   { id:8, cat:"descanso", nombre:"Montura 2275", precio:129900, img:"img/2275.jpg" },
   { id:9, cat:"descanso", nombre:"Montura 9217", precio:129900, img:"img/9217.jpg" },
   { id:10, cat:"descanso", nombre:"Montura 2271", precio:129900, img:"img/2271.jpg" },
-  { id:11, cat:"descanso", nombre:"Montura 8010", precio:129900, img:"img/8010.jpg" }
+  { id:11, cat:"descanso", nombre:"Montura 8010", precio:129900, img:"img/8010.jpg" },
+  { id:12, cat:"deportivas", nombre:"Gafas sport 01", precio:129900, img:"img/sport-1.jpg" },
+  { id:13, cat:"deportivas", nombre:"Gafas sport 02", precio:129900, img:"img/sport-2.jpg" },
+  { id:14, cat:"deportivas", nombre:"Gafas sport 03", precio:129900, img:"img/sport-3.jpg" }
 ];
