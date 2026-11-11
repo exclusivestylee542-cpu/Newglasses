@@ -23,4 +23,15 @@ const CATEGORIAS = [
    - cat es el id del apartado. Si va en varios, usa una lista: cat:["hombre","deportivas"]
    - el producto aparece en su apartado y también en "Todo"                                    */
 const PRODUCTOS = [
+  { id:1, cat:"descanso", nombre:"Montura 2273", precio:129900, img:"img/productos/2273.jpg" },
+  { id:2, cat:"descanso", nombre:"Montura 9200", precio:129900, img:"img/productos/9200.jpg" },
+  { id:3, cat:"descanso", nombre:"Montura 7021", precio:129900, img:"img/productos/7021.jpg" },
+  { id:4, cat:"descanso", nombre:"Montura 9201", precio:129900, img:"img/productos/9201.jpg" },
+  { id:5, cat:"descanso", nombre:"Montura 6235", precio:129900, img:"img/productos/6235.jpg" },
+  { id:6, cat:"descanso", nombre:"Montura 2272", precio:129900, img:"img/productos/2272.jpg" },
+  { id:7, cat:"descanso", nombre:"Montura 6073", precio:129900, img:"img/productos/6073.jpg" },
+  { id:8, cat:"descanso", nombre:"Montura 2275", precio:129900, img:"img/productos/2275.jpg" },
+  { id:9, cat:"descanso", nombre:"Montura 9217", precio:129900, img:"img/productos/9217.jpg" },
+  { id:10, cat:"descanso", nombre:"Montura 2271", precio:129900, img:"img/productos/2271.jpg" },
+  { id:11, cat:"descanso", nombre:"Montura 8010", precio:129900, img:"img/productos/8010.jpg" }
 ];
