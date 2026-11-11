@@ -5,7 +5,7 @@ ARCHIVOS
   style.css     diseño
   script.js     carrito, enlaces (CONFIG) e imágenes incrustadas
   productos.js  APARTADOS Y PRODUCTOS  <-- aquí agregas tus productos
-  img/          carpeta de imágenes (img/productos/ para las fotos de tus productos)
+  img/          carpeta de imágenes (las fotos de tus productos van aquí, directo en img/)
 Sube todos juntos. Para ver la página abre index.html.
 
 1. Enlaces y WhatsApp: abre script.js y cambia, al inicio, el bloque CONFIG
@@ -15,7 +15,7 @@ Sube todos juntos. Para ver la página abre index.html.
 2. Apartados y productos: abre productos.js.
    - CATEGORIAS: los apartados (dama, hombre, deportivas, descanso, sol, niños, accesorios). Puedes editarlos.
    - PRODUCTOS: una línea por producto:
-     { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
+     { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/001.jpg" },
      Para varios apartados: cat:["hombre","deportivas"]
    Este archivo no se sobrescribe cuando se actualiza la página, así tus productos no se pierden.
 
