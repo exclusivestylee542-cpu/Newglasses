@@ -19,3 +19,7 @@ esos 3 archivos. Para verla: abre index.html en el navegador.
 3. Textos: el texto de "Nuestra historia" está en index.html (sección id="historia").
 
 La carpeta img también guarda las imágenes originales recortadas, por si las necesitas.
+
+NOTA: los enlaces de WhatsApp, Instagram y Facebook también están escritos directo en index.html
+(busca data-wa, data-ig y data-fb). Si cambias el número o un enlace, cámbialo en script.js (CONFIG) y en index.html.
+Para que se vea la versión nueva, reemplaza los 3 archivos (index.html, style.css, script.js) en tu hosting y borra la caché del navegador.
