@@ -6,19 +6,12 @@ const CONFIG = {
   tienda:    "New Glasses Medellín"
 };
 
-/* ============ PRODUCTOS ============
-   El catálogo está vacío. Para agregar uno, copia este formato dentro de la lista
-   (guarda la foto en img/productos/):
-   { id:1, cat:"dama",   nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
-   { id:2, cat:"hombre", nombre:"Montura 002", precio:129900, img:"img/productos/002.jpg" },
-*/
-const PRODUCTOS = [
-];
+/* Los productos y apartados están en productos.js */
 
 /* ============ LÓGICA ============ */
 const $ = s => document.querySelector(s);
 const fmt = n => "$" + n.toLocaleString("es-CO");
-let cat = "dama";
+let cat = "todo";
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem("ng_cart") || "[]"); } catch (e) { cart = []; }
 
@@ -28,16 +21,22 @@ document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink("Hola New Gl
 document.querySelectorAll("[data-ig]").forEach(a => a.href = CONFIG.instagram);
 document.querySelectorAll("[data-fb]").forEach(a => a.href = CONFIG.facebook);
 
+function renderTabs(){
+  const all = [{ id: "todo", nombre: "Todo" }, ...CATEGORIAS];
+  $("#tabs").innerHTML = all.map(c => `<button class="tab${c.id === cat ? " on" : ""}" data-cat="${c.id}" role="tab">${c.nombre}</button>`).join("");
+}
 function setTab(c){
   cat = c;
   document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.cat === cat));
   renderGrid();
 }
 function renderGrid(){
-  const list = PRODUCTOS.filter(p => p.cat === cat);
+  const list = PRODUCTOS.filter(p => cat === "todo" || [].concat(p.cat).includes(cat));
   const g = $("#grid");
   if (!list.length){
-    g.innerHTML = `<div class="empty"><h3>Próximamente</h3><p>Estamos preparando la nueva colección de gafas de ${cat}. Escríbenos por WhatsApp para conocer lo que tenemos disponible.</p></div>`;
+    const info = CATEGORIAS.find(c => c.id === cat);
+    const msg = info ? `Estamos preparando la sección «${info.nombre}».` : "Estamos preparando nuestra nueva colección.";
+    g.innerHTML = `<div class="empty"><h3>Próximamente</h3><p>${msg} Escríbenos por WhatsApp para conocer lo que tenemos disponible.</p></div>`;
     return;
   }
   g.innerHTML = list.map(p => `
@@ -117,7 +116,7 @@ $("#co").addEventListener("submit", e => {
   cart = []; save(); e.target.reset(); openCart(false); toast("¡Pedido enviado por WhatsApp!");
 });
 
-renderGrid(); renderCart();
+renderTabs(); renderGrid(); renderCart();
 
 /* ============ IMÁGENES INCRUSTADAS ============
    Las fotos de la página van dentro de este archivo, así se ven siempre,

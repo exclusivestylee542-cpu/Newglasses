@@ -1,25 +1,22 @@
 NEW GLASSES MEDELLIN - Tienda online
 
-ARCHIVOS: index.html (estructura), style.css (diseño), script.js (carrito, configuración e imágenes).
-Las imágenes de la página (logo, portada, local, collage y showroom) y el fondo de mármol
-van INCRUSTADOS dentro de script.js y style.css, así que se ven siempre, aunque solo subas
-esos 3 archivos. Para verla: abre index.html en el navegador.
+ARCHIVOS
+  index.html    estructura de la página
+  style.css     diseño
+  script.js     carrito, enlaces (CONFIG) e imágenes incrustadas
+  productos.js  APARTADOS Y PRODUCTOS  <-- aquí agregas tus productos
+  img/          carpeta de imágenes (img/productos/ para las fotos de tus productos)
+Sube todos juntos. Para ver la página abre index.html.
 
-1. Abre script.js y cambia, al inicio, en CONFIG:
-   - whatsapp:  tu número con indicativo, sin + ni espacios (ej. 573001234567)
-   - instagram: el enlace de tu Instagram
-   - facebook:  el enlace de tu Facebook
-   Con eso se actualizan el botón flotante de WhatsApp, la barra superior (Instagram y Facebook) y los botones de contacto.
+1. Enlaces y WhatsApp: abre script.js y cambia, al inicio, el bloque CONFIG
+   (whatsapp, instagram, facebook). Los enlaces también están escritos en index.html
+   (busca data-wa, data-ig, data-fb); si los cambias, cámbialos en ambos sitios.
 
-2. Agregar productos: guarda la foto en la carpeta img/productos/ (esta carpeta SÍ debe subirse
-   junto a los 3 archivos) y agrega una línea en la lista PRODUCTOS de script.js:
-   { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
-   (cat puede ser "dama" o "hombre"; cada id debe ser distinto)
+2. Apartados y productos: abre productos.js.
+   - CATEGORIAS: los apartados (dama, hombre, deportivas, descanso, sol, niños, accesorios). Puedes editarlos.
+   - PRODUCTOS: una línea por producto:
+     { id:1, cat:"dama", nombre:"Montura 001", precio:129900, img:"img/productos/001.jpg" },
+     Para varios apartados: cat:["hombre","deportivas"]
+   Este archivo no se sobrescribe cuando se actualiza la página, así tus productos no se pierden.
 
-3. Textos: el texto de "Nuestra historia" está en index.html (sección id="historia").
-
-La carpeta img también guarda las imágenes originales recortadas, por si las necesitas.
-
-NOTA: los enlaces de WhatsApp, Instagram y Facebook también están escritos directo en index.html
-(busca data-wa, data-ig y data-fb). Si cambias el número o un enlace, cámbialo en script.js (CONFIG) y en index.html.
-Para que se vea la versión nueva, reemplaza los 3 archivos (index.html, style.css, script.js) en tu hosting y borra la caché del navegador.
+3. Para ver una versión nueva: reemplaza los archivos en tu hosting y refresca sin caché (Ctrl+F5).
