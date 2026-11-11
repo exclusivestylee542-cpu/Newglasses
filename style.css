@@ -185,3 +185,4 @@ footer .fl{color:var(--gold);letter-spacing:.45em;font-size:.62rem;margin-bottom
 
 /* Productos: siempre 2 por fila (también en celular) */
 @media(max-width:600px){.grid{gap:10px}.card h3{font-size:1.05rem}.card .bd{padding:14px 10px 12px}.card .pr{font-size:.8rem;letter-spacing:.08em}.card .add{margin-top:10px;padding:10px 4px;font-size:.52rem;letter-spacing:.18em}}
+@media(max-width:700px){#coleccion{padding-top:40px}}
