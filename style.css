@@ -65,8 +65,9 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
 
 /* Portada */
 .hero{position:relative;padding:0;height:calc(100svh - 68px);min-height:600px;overflow:hidden;background:var(--ink)}
-.hero-img{position:absolute;top:-70px;left:0;width:100%;height:calc(100% + 70px);object-fit:cover;object-position:center top}
-.hero-copy{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 34px;text-align:center;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.95) 30%,rgba(0,0,0,0))}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.hero-logo{display:none}
+.hero-copy{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 34px;text-align:center;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.92) 25%,rgba(0,0,0,0))}
 .hero .eyebrow{display:none}
 .hero h1{font-size:clamp(1.7rem,7.4vw,2.4rem);margin-bottom:20px;font-weight:300}
 .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -80,6 +81,7 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
   .hero-copy{position:static;order:1;align-self:center;text-align:left;background:none;padding:0 6vw 0 max(24px,calc((100vw - 1120px)/2))}
   .hero h1{font-size:clamp(2.8rem,4.6vw,4.4rem);margin-bottom:34px}
   .actions{justify-content:flex-start}
+  .hero-logo{display:block;height:92px;width:auto;margin:0 0 30px}
 }
 
 /* Bloques imagen + texto */
