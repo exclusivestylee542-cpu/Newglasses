@@ -40,15 +40,13 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
 .btn.line:hover{background:var(--gold);color:var(--ink)}
 .btn:disabled{opacity:.4;cursor:default}
 
-/* Barra superior (Instagram / Facebook) */
-.topbar{background:#050506;border-bottom:1px solid var(--line-s);font-size:.58rem;letter-spacing:.32em;text-transform:uppercase}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
-.tb-tag{color:var(--muted)}
-.tb-links{display:flex;gap:28px}
-.tb-links a{display:flex;align-items:center;gap:9px;color:var(--gold-l);transition:.25s}
-.tb-links a:hover{color:#fff}
-.tb-links svg{width:13px;height:13px;fill:currentColor}
-@media(max-width:600px){.tb-tag{display:none}.tb-links{width:100%;justify-content:center;gap:34px}}
+/* Redes justo debajo del logo */
+.follow{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:26px 24px;background:rgba(0,0,0,.62);border-top:1px solid var(--line-s);border-bottom:1px solid var(--line-s)}
+.follow-t{font-size:.6rem;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-right:10px}
+.fbtn{display:inline-flex;align-items:center;gap:10px;padding:11px 22px;border:1px solid var(--line);color:var(--gold-l);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;transition:.25s}
+.fbtn:hover{background:var(--gold);color:var(--ink)}
+.fbtn svg{width:14px;height:14px;fill:currentColor}
+@media(max-width:600px){.follow{padding:22px 16px;gap:10px}.follow-t{display:none}.fbtn{padding:11px 16px;letter-spacing:.2em}}
 
 /* Encabezado */
 .top{position:sticky;top:0;z-index:50;background:rgba(6,6,7,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-s)}
@@ -66,7 +64,7 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
 @media(max-width:420px){.brand span{font-size:.92rem;letter-spacing:.18em}}
 
 /* Portada */
-.hero{position:relative;padding:0;height:calc(100svh - 106px);min-height:600px;overflow:hidden;background:var(--ink)}
+.hero{position:relative;padding:0;height:calc(100svh - 68px);min-height:600px;overflow:hidden;background:var(--ink)}
 .hero-img{position:absolute;top:-70px;left:0;width:100%;height:calc(100% + 70px);object-fit:cover;object-position:center top}
 .hero-copy{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 34px;text-align:center;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.95) 30%,rgba(0,0,0,0))}
 .hero .eyebrow{display:none}
