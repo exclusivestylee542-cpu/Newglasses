@@ -40,6 +40,16 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
 .btn.line:hover{background:var(--gold);color:var(--ink)}
 .btn:disabled{opacity:.4;cursor:default}
 
+/* Barra superior (Instagram / Facebook) */
+.topbar{background:#050506;border-bottom:1px solid var(--line-s);font-size:.58rem;letter-spacing:.32em;text-transform:uppercase}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.tb-tag{color:var(--muted)}
+.tb-links{display:flex;gap:28px}
+.tb-links a{display:flex;align-items:center;gap:9px;color:var(--gold-l);transition:.25s}
+.tb-links a:hover{color:#fff}
+.tb-links svg{width:13px;height:13px;fill:currentColor}
+@media(max-width:600px){.tb-tag{display:none}.tb-links{width:100%;justify-content:center;gap:34px}}
+
 /* Encabezado */
 .top{position:sticky;top:0;z-index:50;background:rgba(6,6,7,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-s)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
@@ -56,7 +66,7 @@ em{font-style:italic;color:var(--gold-l);font-weight:300}
 @media(max-width:420px){.brand span{font-size:.92rem;letter-spacing:.18em}}
 
 /* Portada */
-.hero{position:relative;padding:0;height:calc(100svh - 68px);min-height:600px;overflow:hidden;background:var(--ink)}
+.hero{position:relative;padding:0;height:calc(100svh - 106px);min-height:600px;overflow:hidden;background:var(--ink)}
 .hero-img{position:absolute;top:-70px;left:0;width:100%;height:calc(100% + 70px);object-fit:cover;object-position:center top}
 .hero-copy{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 34px;text-align:center;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.95) 30%,rgba(0,0,0,0))}
 .hero .eyebrow{display:none}
@@ -172,43 +182,3 @@ footer .fl{color:var(--gold);letter-spacing:.45em;font-size:.62rem;margin-bottom
 .co .row .btn{flex:1;padding:14px 10px}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);border:1px solid var(--line);color:var(--gold-l);padding:12px 22px;z-index:130;font-size:.78rem;letter-spacing:.12em;opacity:0;pointer-events:none;transition:.3s}
 .toast.show{opacity:1}
-
-/* ===== Catálogo: 2 productos por fila ===== */
-#coleccion{padding:72px 0 80px}
-#coleccion .head{margin-bottom:40px}
-#coleccion .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-#coleccion .card .ph{aspect-ratio:3/4}
-#coleccion .card .bd{padding:18px 12px 16px}
-#coleccion .card h3{font-size:1.25rem}
-@media(min-width:960px){
-  #coleccion .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
-  #coleccion .card h3{font-size:1.4rem}
-}
-@media(max-width:700px){
-  #coleccion{padding:48px 0 56px}
-  #coleccion .wrap{padding:0 14px}
-  #coleccion .head{margin-bottom:28px}
-  #coleccion .head-img{display:none}
-  #coleccion h2{font-size:1.75rem}
-  #coleccion .tabs{gap:22px;margin-bottom:24px}
-  #coleccion .grid{gap:12px}
-  #coleccion .card .bd{padding:12px 8px 12px;gap:4px}
-  #coleccion .card h3{font-size:1.02rem}
-  #coleccion .card .pr{font-size:.72rem;letter-spacing:.08em}
-  #coleccion .card .add{margin-top:8px;padding:11px 4px;font-size:.52rem;letter-spacing:.16em}
-}
-
-/* ===== Portada con la nueva imagen de fondo ===== */
-.hero{background:#000;height:calc(100svh - 68px - 90px)}
-.hero::before{content:"";position:absolute;inset:-30px;background:url("portada-nueva.jpg") center/cover;filter:blur(28px) brightness(.45);z-index:0}
-.hero h1,.hero .eyebrow{display:none!important}
-.hero-img{z-index:1;top:0;left:0;width:100%;height:calc(100% - 84px);object-fit:cover;object-position:center top}
-.hero-copy{z-index:2;left:0;right:0;bottom:0;height:84px;padding:0 14px;display:flex;align-items:center;justify-content:center;background:#000}
-.hero .actions{display:flex;flex-wrap:nowrap;justify-content:center;gap:10px;margin:0}
-.hero .btn{padding:13px 12px;font-size:.56rem;letter-spacing:.16em;white-space:nowrap}
-@media(min-width:900px){
-  .hero{display:block;height:calc(100svh - 68px)}
-  .hero-img{position:absolute;left:50%;width:auto;max-width:100%;transform:translateX(-50%);object-fit:contain;order:0}
-  .hero-copy{position:absolute;left:0;right:0;bottom:0;padding:0 24px;text-align:center;align-self:auto}
-  .hero .btn{padding:15px 30px;font-size:.7rem;letter-spacing:.24em}
-}

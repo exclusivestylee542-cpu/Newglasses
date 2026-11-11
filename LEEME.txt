@@ -9,7 +9,7 @@ esos 3 archivos. Para verla: abre index.html en el navegador.
    - whatsapp:  tu número con indicativo, sin + ni espacios (ej. 573001234567)
    - instagram: el enlace de tu Instagram
    - facebook:  el enlace de tu Facebook
-   Con eso se actualizan el botón flotante de WhatsApp y los botones de contacto.
+   Con eso se actualizan el botón flotante de WhatsApp, la barra superior (Instagram y Facebook) y los botones de contacto.
 
 2. Agregar productos: guarda la foto en la carpeta img/productos/ (esta carpeta SÍ debe subirse
    junto a los 3 archivos) y agrega una línea en la lista PRODUCTOS de script.js:
